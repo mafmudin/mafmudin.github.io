@@ -30,11 +30,37 @@ ul {
 }
 
 .mid-pannel{
-	margin-left: 200px;
-	margin-right: 400px;
+	margin-left: 20%;
+	margin-right: 30%;
+}
+
+.right-pannel{
+	margin-left: 70%;
+	padding-left: 10px;
+	top: 0;
 }
 
 .my-paragraph{
 	text-indent: 50px;
 	text-align: justify;
+}
+
+#footer {
+	height: 50px; 
+	position: fixed;
+	bottom: 0;
+    width: 100%;/* the footer's total height */
+}
+
+#footer-content {
+  background-color: #EEEEEE;
+  border: 1px solid #BDBDBD;
+  text-align: center;
+  height: 50px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+}
+
+.image-profile{
+	border-radius: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
