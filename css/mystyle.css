@@ -28,3 +28,13 @@ html {
 ul {
   list-style-type: none;
 }
+
+.mid-pannel{
+	margin-left: 200px;
+	margin-right: 400px;
+}
+
+.my-paragraph{
+	text-indent: 50px;
+	text-align: justify;
+}
