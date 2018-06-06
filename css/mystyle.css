@@ -27,6 +27,7 @@ html {
 
 ul {
   list-style-type: none;
+  left: 0px;
 }
 
 .mid-pannel{
@@ -53,10 +54,9 @@ ul {
 }
 
 #footer-content {
-  background-color: #EEEEEE;
-  border: 1px solid #BDBDBD;
   text-align: center;
-  height: 50px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+  padding-top: 50px;
+  height: 100px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
 }
 
 .image-profile{
