@@ -36,14 +36,15 @@
 				
 				<br>
 				<a href="myrepo.html">Daftar Repositori</a><br>
+
+				<?php
+	echo "tampilkan";
+?>
 			</div>
 		</div>
 	</div>
 </div>
 
-<?php
-	echo "tampilkan";
-?>
 <footer id="">
 	<div id="footer-content">&copy; 2018 Muchamad Mafmudin </br>
 		<a aria-label="Homepage" title="GitHub" class="footer-octicon" href="https://github.com">
