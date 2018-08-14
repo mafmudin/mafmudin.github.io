@@ -36,10 +36,6 @@
 				
 				<br>
 				<a href="myrepo.html">Daftar Repositori</a><br>
-
-				<?php
-	echo "tampilkan";
-?>
 			</div>
 		</div>
 	</div>
