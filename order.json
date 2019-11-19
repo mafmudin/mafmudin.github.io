@@ -1,0 +1,20 @@
+{ 
+   "success":true,
+   "message":"Pengakhiran order berhasil.",
+   "result":{ 
+      "order_id":181289,
+      "order_type":"T",
+      "distance":1420,
+      "waiting_time":0,
+      "order_duration":313,
+      "trip_fare":4000,
+      "cust_charge":4000,
+      "customer_name":"ELISABET YULIANA P",
+      "customer_photo_path":"http://103.56.205.130/dev/dev-get/container/file_customer/23-1547892586.jpg",
+      "from_addr":"Jl. Cik Di Tiro No.34, Terban, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223, Indonesia",
+      "to_addr":"KFC Sudirman KFC Sudirman, Jalan Jendral Sudirman, Terban, Yogyakarta City, Special Region of Yogyakarta, Indonesia",
+      "payment_method":"C",
+      "order_payable":0,
+      "customer_debt":"200316"
+   }
+}
