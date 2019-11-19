@@ -10,7 +10,7 @@
       "trip_fare":4000,
       "cust_charge":4000,
       "customer_name":"Muchamad mafmudin",
-      "customer_photo_path":"https://github.com/mafmudin/mafmudin.github.io/blob/master/images/poto.jpeg",
+      "customer_photo_path":"https://raw.githubusercontent.com/mafmudin/mafmudin.github.io/master/images/poto.jpeg",
       "from_addr":"Jl. Cik Di Tiro No.34, Terban, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223, Indonesia",
       "to_addr":"KFC Sudirman KFC Sudirman, Jalan Jendral Sudirman, Terban, Yogyakarta City, Special Region of Yogyakarta, Indonesia",
       "payment_method":"C",
