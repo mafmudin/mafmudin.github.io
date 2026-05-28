@@ -6,34 +6,37 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal GitHub Pages site (`mafmudin/mafmudin.github.io`) — a static portfolio for Mafmudin (Android developer). Content is written in **Bahasa Indonesia**; keep it that way when editing copy unless the user asks otherwise.
 
-Two pages carry the actual content:
+Two pages:
 
-- `index.html` — landing page listing personal libraries (ProDialog, MPopUp).
-- `aboutme.html` — portfolio: Android apps on Play Store ("Aplikasi Saya") and client projects ("Project Saya"). To add an entry, copy an existing `.col-lg-4 ... <div class="card">…</div>` block in the relevant section.
+- `index.html` — landing page listing open-source libraries (ProDialog, MPopUp).
+- `aboutme.html` — portfolio: Tentang Saya, Aplikasi Saya (Play Store apps), Project Saya (client work).
 
 `mycv.svg` is the linked CV.
 
 ## Build, run, deploy
 
-There is **no build step and no package.json** — `css/` and `js/` ship as pre-compiled vendor files. Do not try to `npm install`, run a bundler, or expect a test/lint command; none exist. Edit HTML and CSS directly.
+There is **no build step**. The site is plain HTML + one CSS file (`css/style.css`) + Google Fonts (Inter, JetBrains Mono) + Font Awesome via CDN. **Zero JavaScript.**
 
-- Preview locally: `python3 -m http.server 8000` from the repo root, open <http://localhost:8000>. Any static server works; opening the HTML as `file://` breaks the WOW.js animation init and some relative paths.
+- Preview locally: `python3 -m http.server 8000` from the repo root, then open <http://localhost:8000>. Opening as `file://` works but blocks some browsers from caching fonts; serve locally for an accurate preview.
 - Deploy: push to `master`. GitHub Pages serves the repo root.
+
+## Architecture
+
+- `css/style.css` is the single stylesheet. Layout follows seven labeled sections at the top of the file: Tokens, Reset & base, Typography, Layout utilities, Components, Page-specific, Reduced motion. Add new styles to the matching section.
+- Design tokens live in `:root` (colors, spacing, radius, type, motion, layout). **Don't hardcode colors or spacing values** — reference the variables.
+- The mobile menu is CSS-only (a sibling `<input type="checkbox">` toggles `~ .navbar-links` visibility). Don't add JavaScript for this — keep it dependency-free.
+- Card images use `<img>` against `play-lh.googleusercontent.com` URLs (Play Store CDN). To add a new app card, copy an existing `<article class="card">` block and swap the image URL, title, description, and Play Store link.
 
 ## Where to put changes
 
-- **Custom CSS overrides** → `css/style.css` (currently empty, already linked from both HTML files after `mdb.min.css`). Do not edit `css/mdb*.css` or `css/bootstrap*.css` — those are vendored.
+- **Visual / design tokens** → top of `css/style.css` (`:root`).
+- **New components** → `css/style.css` section 5 (Components).
 - **Page content / structure** → `index.html` or `aboutme.html` directly.
-- **Images** → `img/`. `my-2020_Images/` is a separate older asset folder; prefer `img/` for new assets.
+- **Images** → `img/`.
 
-### About `scss/` and `src/`
+## Conventions
 
-`scss/` contains the upstream MDB Sass source (entry: `scss/mdb-free.scss`) with two empty hooks (`_custom-styles.scss`, `_custom-variables.scss`). **There is no Sass compiler wired up in this repo** — recompiling the MDB CSS would require setting up MDB's external build pipeline, which the user has not done here. For everyday changes, edit `css/style.css` instead of touching `scss/`. Do the same for the `src/` tree (vendor JS source).
-
-## Versions to preserve
-
-- MDB FREE **4.19.0** (jQuery flavor), Bootstrap 4, jQuery 3.4.1. Don't propose upgrading to MDB 5+ or Bootstrap 5 — the markup uses Bootstrap 4 conventions (`data-toggle`, `ml-2`, `waves-effect`) and an upgrade would touch every page.
-
-## Navbar duplication gotcha
-
-Both `index.html` and `aboutme.html` contain the navbar markup **twice** — once inside the `<button class="navbar-toggler">` (mobile collapse) and once inside `<div class="collapse navbar-collapse">` (desktop). When adding/renaming a nav link, update **both copies in both files** or the mobile and desktop menus will drift.
+- Bahasa Indonesia for visible copy.
+- External links always include `target="_blank" rel="noopener"`.
+- Use `aria-current="page"` on the active nav link.
+- Section labels read `— LABEL` (em-dash + space + uppercase mono text); tags read `▸ LABEL` (triangle + space + uppercase mono text). Both styles are font-controlled via `.section-label` and `.tag`.
