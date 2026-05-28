@@ -83,3 +83,33 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; background: none; border: 0; color: inherit; padding: 0; }
 
 ul { list-style: none; padding: 0; }
+
+/* ---------- 3. Typography ---------- */
+
+h1, h2, h3, h4 {
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+h2 { font-size: 32px; }
+h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+h4 { font-size: 14px; font-weight: 600; letter-spacing: 0; color: var(--text-secondary); }
+
+p { color: var(--text-secondary); }
+
+.accent {
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
