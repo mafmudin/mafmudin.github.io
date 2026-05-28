@@ -214,6 +214,13 @@ p { color: var(--text-secondary); }
   margin-bottom: var(--space-4);
 }
 
+/* Tag variant for the current role — slightly more prominent */
+.tag-current {
+  color: var(--text-primary);
+  background: linear-gradient(135deg, rgba(163, 177, 138, 0.30), rgba(88, 129, 87, 0.30));
+  border: 1px solid var(--border-strong);
+}
+
 /* Card */
 .card {
   position: relative;
