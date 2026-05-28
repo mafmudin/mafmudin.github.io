@@ -271,3 +271,141 @@ p { color: var(--text-secondary); }
   flex: 1;
 }
 .card .btn { align-self: flex-start; }
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background: rgba(12, 15, 13, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+@media (min-width: 1024px) {
+  .navbar-inner { padding: 0 48px; }
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+.navbar-brand::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.navbar-links {
+  display: flex;
+  gap: var(--space-5);
+  align-items: center;
+}
+.navbar-links a {
+  position: relative;
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.navbar-links a:hover { color: var(--text-primary); }
+.navbar-links a[aria-current="page"] { color: var(--text-primary); }
+.navbar-links a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  border-radius: 1px;
+}
+
+.navbar-social {
+  margin-left: auto;
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+.navbar-social a {
+  color: var(--text-muted);
+  font-size: 15px;
+  transition: color var(--transition);
+}
+.navbar-social a:hover { color: var(--text-primary); }
+.navbar-social .github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+.navbar-social .github:hover {
+  border-color: var(--accent-from);
+  color: var(--text-primary);
+}
+
+/* Mobile menu — CSS-only checkbox + label */
+.nav-toggle { display: none; }
+.nav-toggle-label { display: none; }
+
+@media (max-width: 767px) {
+  .nav-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 18px;
+  }
+  .nav-toggle-label::before { content: '☰'; }
+  .nav-toggle:checked ~ .nav-toggle-label::before { content: '✕'; font-size: 16px; }
+
+  .navbar-links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-base);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-5);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+    display: none;
+  }
+  .nav-toggle:checked ~ .navbar-links { display: flex; }
+
+  /* On mobile, social cluster collapses to nothing — those links live in the footer. */
+  .navbar-social { display: none; }
+}
