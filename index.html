@@ -13,153 +13,87 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar top-nav-collapse">
-      <div class="container">
 
-        <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="#">
-          <strong class="blue-text">Mafmudin Github</strong>
-        </a>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html">Mafmudin</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation"></label>
+    <ul class="navbar-links">
+      <li><a href="index.html" aria-current="page">Beranda</a></li>
+      <li><a href="aboutme.html">Portofolio</a></li>
+    </ul>
+    <ul class="navbar-social">
+      <li><a href="https://www.facebook.com/mafmudin/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://twitter.com/mafmudin" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/muchama_m/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+      <li><a class="github" href="https://github.com/Mafmudin" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+    </ul>
+  </div>
+</nav>
 
-        <!-- Collapse -->
-        <button class="navbar-toggler text-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- Left -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect" href="index.html">Beranda
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="aboutme.html">Portofolio</a>
-            </li>
-          </ul>
+<main>
 
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="https://www.facebook.com/mafmudin/" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
+  <section class="hero hero-compact">
+    <div class="container">
+      <div class="hero-label">— Open Source</div>
+      <h1>Library <span class="accent">Android.</span></h1>
+      <p class="hero-lead">Beberapa library kecil yang saya rilis di GitHub untuk komunitas Android.</p>
+    </div>
+  </section>
 
-            <li class="nav-item">
-              <a href="https://twitter.com/mafmudin" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            
-            <li class="nav-item">
-              <a href="https://www.instagram.com/muchama_m/" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://github.com/Mafmudin" class="nav-link border border-light rounded waves-effect" target="_blank">
-                <i class="fab fa-github mr-2"></i>GitHub
-              </a>
-            </li>
-          </ul>
-        </button>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <article class="card">
+          <div class="tag">▸ Open Source · Library</div>
+          <h3 class="card-title">ProDialog</h3>
+          <p class="card-desc">Library Android untuk menampilkan progress dialog dengan gambar bergerak (SVG &amp; GIF). Ditampilkan selama proses pemuatan data berlangsung, supaya view tidak menampilkan data yang belum siap.</p>
+          <a class="btn btn-primary" href="https://mafmudin.github.io/progress-sg/" target="_blank" rel="noopener">Buka GitHub ↗</a>
+        </article>
 
-          <!-- Left -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect" href="index.html">Beranda
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="aboutme.html">Portofolio</a>
-            </li>
-          </ul>
-
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="https://www.facebook.com/mafmudin/" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="https://twitter.com/mafmudin" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            
-            <li class="nav-item">
-              <a href="https://www.instagram.com/muchama_m/" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://github.com/Mafmudin" class="nav-link border border-light rounded waves-effect" target="_blank">
-                <i class="fab fa-github mr-2"></i>GitHub
-              </a>
-            </li>
-          </ul>
-
-        </div>
+        <article class="card">
+          <div class="tag">▸ Open Source · Library</div>
+          <h3 class="card-title">MPopUp</h3>
+          <p class="card-desc">Permudah pembuatan pop up di Android dengan MPopUp :-)</p>
+          <a class="btn btn-primary" href="https://mafmudin.github.io/MPopUp/" target="_blank" rel="noopener">Buka GitHub ↗</a>
+        </article>
 
       </div>
-    </nav>
-  </header>
+    </div>
+  </section>
 
-  <!-- Start your project here--> 
-  <main class="mt-5 pt-5" >
-    <!-- Content here -->
-    <div class="container">
-      <section class="card wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
-        <!-- Content -->
-        <div class="card-body text-black text-center py-5 px-5 my-5">
+</main>
 
-          <h1 class="mb-4">
-            <strong>ProDialog</strong>
-          </h1>
-          <p>
-            <strong>Library ini digunakan untuk membuat sebuah tampilan progres dialog dengan menggunakan gambar bergerak. Gambar bergerak yang dapat digunakan diantaranya SVG dan GIF. Dalam pembuatan UI/UX pada aplikasi android progress dialog adalah sebuah tampilan yang sangat dibutuhkan, dalam proses memuat data progress dialog akan ditampilkan sebelum data hasil muatan di tampilkan ke dalam view. Dengan adanya progress dialog maka view tidak akan menampilkan data jika data yang di muat belum siap. Jadi progress dialog adalah tampilan ketika proses pemuatan data berlangsung.</strong>
-          </p>
-          <p class="mb-4">
-            <strong>Andorid studio pada dasarnya sudah menyediakan progress dialog, akan tetapi untuk sesi ini saya membuat sebuah library yang dapat digunakan untuk menampilkan gambar bergerak pada progress dialog. </strong>
-          </p>
-          <a target="_blank" href="https://mafmudin.github.io/progress-sg/" class="btn btn-outline-black btn-lg waves-effect waves-light">Buka Github
-            <i class="fab fa-github ml-2"></i>
-          </a>
-
-        </div>
-        <!-- Content -->
-      </section>
-
-      <hr class="my-5">
-      
-      <section class="card wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
-        <!-- Content -->
-        <div class="card-body text-black text-center py-5 px-5 my-5">
-
-          <h1 class="mb-4">
-            <strong>MPopUP</strong>
-          </h1>
-          <p>
-            <strong>Permudah pembuatan pop up dengan MPopUp :-)</strong>
-          </p>
-          <a target="_blank" href="https://mafmudin.github.io/MPopUp/" class="btn btn-outline-black btn-lg waves-effect waves-light">Buka Github
-            <i class="fab fa-github ml-2"></i>
-          </a>
-
-        </div>
-        <!-- Content -->
-      </section>
-
-      <hr class="my-5">
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>Mafmudin</h4>
+        <p>Android developer. Membuat aplikasi yang mudah digunakan.</p>
+      </div>
+      <div>
+        <h4>Tautan</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="aboutme.html">Portofolio</a></li>
+          <li><a href="mycv.svg" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sosial</h4>
+        <ul class="footer-social">
+          <li><a href="https://www.facebook.com/mafmudin/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/mafmudin" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/muchama_m/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://github.com/Mafmudin" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Muchamad Mafmudin · Made with care.</div>
   </div>
-  </main>
-  
-  <!-- End your project here-->
+</footer>
 
 </body>
 </html>
