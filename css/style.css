@@ -158,3 +158,58 @@ p { color: var(--text-secondary); }
 @media (min-width: 1024px) {
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* ---------- 5. Components ---------- */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 11px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition),
+              color var(--transition),
+              background var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  color: var(--bg-base);
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px var(--accent-glow);
+}
+
+.btn-outline {
+  color: var(--text-secondary);
+  border-color: var(--border-strong);
+}
+.btn-outline:hover {
+  border-color: var(--accent-from);
+  color: var(--text-primary);
+}
+
+/* Tag (▸ chip) */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-from);
+  background: rgba(163, 177, 138, 0.15);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-4);
+}
