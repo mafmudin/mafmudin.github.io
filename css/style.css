@@ -409,3 +409,124 @@ p { color: var(--text-secondary); }
   /* On mobile, social cluster collapses to nothing — those links live in the footer. */
   .navbar-social { display: none; }
 }
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: var(--space-8) 0 var(--space-6);
+  margin-top: var(--space-9);
+  color: var(--text-faint);
+  font-size: 13px;
+}
+.footer-inner {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .footer-inner { grid-template-columns: 2fr 1fr 1fr; gap: var(--space-8); }
+}
+.footer h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--text-secondary);
+}
+.footer ul { display: flex; flex-direction: column; gap: var(--space-2); }
+.footer a { color: var(--text-faint); transition: color var(--transition); }
+.footer a:hover { color: var(--text-primary); }
+.footer-social { flex-direction: row !important; gap: var(--space-4) !important; }
+.footer-social a { font-size: 16px; }
+.footer-bottom {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+/* ---------- 6. Page-specific ---------- */
+
+/* Hero — typographic, used on aboutme.html */
+.hero {
+  position: relative;
+  padding-top: calc(var(--nav-height) + var(--space-9));
+  padding-bottom: var(--space-9);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: -160px;
+  left: -120px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-from);
+  margin-bottom: var(--space-4);
+}
+.hero h1 {
+  margin-bottom: var(--space-4);
+  max-width: 14ch;
+}
+.hero-lead {
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 48ch;
+  margin-bottom: var(--space-6);
+  line-height: 1.55;
+}
+.hero-ctas {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Hero compact — used on index.html */
+.hero-compact { padding-bottom: var(--space-7); }
+.hero-compact h1 {
+  font-size: clamp(32px, 4.5vw, 52px);
+  max-width: 20ch;
+}
+
+/* About (Tentang Saya) */
+.about-grid {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .about-grid {
+    grid-template-columns: 96px 1fr;
+    gap: var(--space-6);
+  }
+}
+.about-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 14px;
+  border: 1px solid var(--border-strong);
+  object-fit: cover;
+}
+
+/* ---------- 7. Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
